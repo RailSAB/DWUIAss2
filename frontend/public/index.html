@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Web Traffic Visualization</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="info">Web Traffic Visualization</div>
+    <div id="stats">
+        <h3>Statistics</h3>
+        <div id="statistics"></div>
+        <h3>Top Locations</h3>
+        <div id="top-locations"></div>
+        <h3>Activity</h3>
+        <canvas id="activity-chart" width="280" height="150"></canvas>
+    </div>
+    <div id="controls">
+        <button id="toggle-rotation">Pause Rotation</button>
+        <button id="toggle-points">Hide Points</button>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/build/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/examples/js/controls/OrbitControls.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

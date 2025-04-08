@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  sender:
+    build:
+      context: ./sender
+      dockerfile: Dockerfile
+    depends_on:
+      - server
+    volumes:
+      - ./sender/ip_addresses.csv:/app/ip_addresses.csv
+
+  server:
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    ports:
+      - "5000:5000"
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "8080:80"
+    depends_on:
+      - server
